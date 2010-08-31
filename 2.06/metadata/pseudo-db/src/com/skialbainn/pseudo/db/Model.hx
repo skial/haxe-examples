@@ -12,12 +12,9 @@ class Model {
 		
 		checkName(cls);
 		
-		for (f in fields) {
-			if (has(meta, f)) {
-				_temp_ = Reflect.field(meta, f);
-				checkKey(_temp_);
-				checkRequired(_temp_, f);
-			}
+		for (f in Reflect.fields(meta)) {
+			_temp_ = Reflect.field(meta, f);
+			checkKeyRequired(_temp_, f);
 		}
 	}
 	
@@ -33,15 +30,12 @@ class Model {
 			trace(err(this + ' requires table name'));
 		}
 	}
-   
-	private function checkKey(_meta) {
+	
+	private function checkKeyRequired(_meta, _field) {
+		var _msg_;
 		if (has(_meta, 'key')) {
 			// pseudo db code
 		}
-	}
-	
-	private function checkRequired(_meta, _field) {
-		var _msg_;
 		if (has(_meta, 'required')) {
 			if (Reflect.field(this, _field) == null) {
 				trace(err('Field ' + _field + ' cant be null'));
