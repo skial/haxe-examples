@@ -1,0 +1,4 @@
+-cp src\example-bind
+-swf9 bin\compiler-example-bind.swf
+-swf-lib fla-dummy.swf
+-main Main

@@ -1,0 +1,3 @@
+-cp src\example-native
+-swf9 bin\compiler-example-native.swf
+-main Main

@@ -1,0 +1,3 @@
+-cp src\example-final
+-swf9 bin\compiler-example-final.swf
+-main Main
