@@ -1,11 +1,8 @@
 ﻿package ;
 
-import flash.display.DisplayObject;
 import flash.display.MovieClip;
 import flash.display.Sprite;
 import flash.Lib;
-import flash.net.URLRequest;
-import flash.events.Event;
 
 @:bind
 class Pow extends MovieClip { 
