@@ -1,11 +1,6 @@
-/**
- * ...
- * @author Skial Bainn
- */
-
 package ;
 
-@core_api 
+@:core_api 
 class Foo {
 	
 	public static function poke(what:String):String {

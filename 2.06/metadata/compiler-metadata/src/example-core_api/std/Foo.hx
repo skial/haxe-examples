@@ -1,8 +1,3 @@
-/**
- * ...
- * @author Skial Bainn
- */
-
 package ;
 
 extern Foo {
