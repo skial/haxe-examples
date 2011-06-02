@@ -9,8 +9,7 @@ import org.w3c.dom.html.HTMLCollection;
 
 interface Element<TDoc,TNodeList,TElm> implements Node<TDoc,TNodeList,TElm> {
 	
-  var tagName(default, never):String;
-  var children(default, never):HTMLCollection;
+  var tagName(default,never):String;
   function getAttribute(name:String):String;
   function setAttribute(name:String, value:String):Void;// raises(DOMException);
   function removeAttribute(name:String):Void;// raises(DOMException);
