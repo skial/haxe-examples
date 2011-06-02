@@ -3,3 +3,6 @@
 org.w3c.dom.html
 	.htmlcollection - remove js.browser.DOM
 	then replace nodelist<element> with dynamic
+
+org.w3c.dom
+	.document - comment out createDocumentFragment
