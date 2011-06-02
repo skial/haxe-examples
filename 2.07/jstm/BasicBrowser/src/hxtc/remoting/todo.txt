@@ -1,0 +1,8 @@
+add remoting for flash and browser windows (possibly Silverlight?)
+WindowConsumer
+WindowService
+FlashConsumer
+FlashService
+
+support limiting services to predefined hostnames etc.
+add Consumers for websites like Yahoo! Pipes, Twitter, Google Search etc.

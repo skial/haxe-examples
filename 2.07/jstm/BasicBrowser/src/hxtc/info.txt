@@ -1,0 +1,4 @@
+Hier komen alle classes die target- en environment onafhankelijk zijn.
+
+Ook worden hier de typedefs, interfaces en abstract classes geplaatst die per target/environment geimplementeerd kunnen worden.
+

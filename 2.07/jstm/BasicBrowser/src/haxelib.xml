@@ -1,0 +1,8 @@
+<project name="ecmascript" url="http://code.google.com/p/jstm/" license="BSD">
+  <user name="mpcref"/>
+  <description>
+		Adds missing ECMAScript features (extern classes and 'using' functions) for
+		supported targets (javascript and flash).
+  </description>
+  <version name="0.1"></version>
+</project>

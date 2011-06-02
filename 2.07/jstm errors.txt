@@ -1,0 +1,5 @@
+﻿biggest confusion is source folder structure.
+
+org.w3c.dom.html
+	.htmlcollection - remove js.browser.DOM
+	then replace nodelist<element> with dynamic

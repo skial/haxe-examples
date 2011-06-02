@@ -1,0 +1,4 @@
+-js ./bin/BasicBrowser.js
+-cp ./src
+-main Main
+--macro jstm.Generator.run(true,false)

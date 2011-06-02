@@ -1,0 +1,4 @@
+check it out!
+http://raphaeljs.com/
+
+also contains interesting color conversion functions
