@@ -1,6 +1,0 @@
-All DOM-related code goes here.
-
-
-Tools for working with Ranges and Selections, here's some inspiration:
-http://tinymce.moxiecode.com/js/tinymce/docs/api/index.html#class_tinymce.dom.Selection.html
-http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.dom.selection.html

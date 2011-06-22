@@ -1,4 +1,0 @@
-The Bing API has some very interesting data we can access using JSON:
-http://api.bing.net/json.aspx?AppId=1234&Version=2.2&Market=en-US&Query=testign&Sources=web+spell&Web.Count=1&JsonType=callback&JsonCallback=UserCallback
-
-http://msdn.microsoft.com/nl-nl/library/dd250846(en-us).aspx
