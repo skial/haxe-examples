@@ -1,0 +1,6 @@
+-cp src
+-cp ../../libs/js
+-lib xirsys_stdjs
+-lib format
+-js bin/webgllesson01.js
+-main Main

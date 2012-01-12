@@ -1,0 +1,4 @@
+-cp src
+-lib xirsys_stdjs
+-js bin/webgldrawsphere.js
+-main Main

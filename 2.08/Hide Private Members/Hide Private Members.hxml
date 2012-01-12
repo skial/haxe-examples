@@ -1,0 +1,3 @@
+-cp src
+-js bin/HidePrivateMembers.js
+-main Main

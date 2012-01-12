@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>webgl_lesson_01</title>
+	<meta name="description" content="" />
+	<script id="shader-fs" type="x-shader/x-fragment">
+    precision mediump float;
+
+    void main(void) {
+        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+    }
+</script>
+
+<script id="shader-vs" type="x-shader/x-vertex">
+    attribute vec3 aVertexPosition;
+
+    uniform mat4 uMVMatrix;
+    uniform mat4 uPMatrix;
+
+    void main(void) {
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+    }
+</script>
+</head>
+<body>
+	<div id="haxe:trace"></div>
+	<canvas id="hx_webgl_lesson_one" width="500" height="500"></canvas>
+	<script src="../../../libs/js/glMatrix-0.9.5.min.js"></script>
+	<script src="../../../libs/js/webgl-debug.js"></script>
+	<script src="webgllesson01.js"></script>
+</body>
+</html>
