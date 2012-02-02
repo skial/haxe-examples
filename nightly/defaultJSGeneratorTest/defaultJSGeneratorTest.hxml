@@ -1,0 +1,8 @@
+-cp src
+-js bin/defaultJSGeneratorTest.custom.js
+-main Main
+--macro haxe.macro.DefaultJSGenerator.use()
+--next
+-cp src
+-js bin/defaultJSGeneratorTest.js
+-main Main
