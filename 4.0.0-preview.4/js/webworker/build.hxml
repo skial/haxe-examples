@@ -1,0 +1,15 @@
+-cp src
+
+-dce full
+-D analyzer-optimize
+
+-main Main
+
+--each
+
+-js bin/entry.js
+
+--next
+
+-D ww
+-js bin/ww.js
