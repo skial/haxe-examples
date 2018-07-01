@@ -1,0 +1,20 @@
+-cp src
+
+-dce full
+-D analyzer-optimize
+
+-main Main
+
+--each
+
+# Unfortunately excluding the following is needed as the extra
+# generated code is not used, but still spit out.
+--macro exclude("js")
+--macro exclude("Std")
+--macro exclude("Math")
+-js bin/entry.js
+
+--next
+
+-D ww
+-js bin/ww.js
