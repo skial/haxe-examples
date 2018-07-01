@@ -1,9 +1,62 @@
 <html lang="en">
     <head>
-        <title>Webworker example using Haxe</title>
+        <title>WebWorker example using Haxe</title>
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body, .preview {
+                display: flex;
+                flex-direction: column;
+            }
+            @media (min-width: 770px) {
+                section {
+                    min-width: 90vw;
+                }
+                .preview {
+                    display: block;
+                }
+                body, .source {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: stretch;
+                }
+                pre:first-of-type {
+                    flex-grow: 1;
+                }
+                pre:last-of-type {
+                    border-left: 1px solid white;
+                    flex-grow: 2;
+                }
+                code {
+                    min-height: 75vh;
+                    max-height: 75vh;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+        <script  src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     </head>
     <body>
-        <p>Open the browsers dev tools to see console logs.</p>
-        <script src="entry.js" async></script>
+        <section class="preview">
+            <pre><h3>demo</h3></pre>
+            <input type="text" placeholder="hello world" required>
+            <input type="text" class="output" disabled>
+            <button>Send to WebWorker</button>
+        </section>
+        <section class="source">
+            <pre>
+                <h3>entry.js</h3>
+                <code class="entry javascript"></code>
+            </pre>            
+            <pre>
+                <h3>ww.js</h3>
+                <code class="ww javascript"></code>
+            </pre>
+        </section>
+        <script async src="entry.js"></script>
     </body>
 </html>

@@ -18,17 +18,25 @@ class Main {
     public static function main() {
         #if !ww
         if (hasWebWorker()) {
-            var mm = new Main();
             var ww = new Worker('ww.js');
+            var input:InputElement = cast self.document.querySelectorAll('input')[0];
+            var submit:ButtonElement = cast self.document.querySelectorAll('button')[0];
             // assign `onmessage` handler before calling `postMessage`, obviously :|
-            ww.onmessage = mm.onmessage;
-            ww.postMessage(['hello', 'world']);
+            ww.onmessage = onmessage;
+            submit.addEventListener('click', _ -> ww.postMessage(input.value == '' ? input.placeholder : input.value) );
+
+            for (id in ['entry', 'ww']) {
+                self.fetch('$id.js')
+                    .then( res -> res.text() )
+                    .then( res -> self.document.querySelector('.$id').innerText = res )
+                    .catchError( e -> self.console.log(e) );
+            }
+            'hljs.initHighlightingOnLoad()'.code();
         } else {
             self.console.error( 'Your browser does not support Web Workers.' );
         }
         #else
-        var mm = new Main();
-        self.onmessage = mm.onmessage;
+        self.onmessage = onmessage;
         #end
     }
 
@@ -38,14 +46,14 @@ class Main {
         return 'window.Worker'.code();
     }
     #end
-    public function new() {
-        trace(#if !ww 'entry.js' #else 'ww.js' #end + ' created');
-    }
 
-    public function onmessage(e:MessageEvent) {
+    public static function onmessage(e:MessageEvent) {
         self.console.log( e.origin, e.data );
         #if ww 
-        self.postMessage( '${e.data[0]} Haxe ${e.data[1]}!!!' );
+        var parts = (cast e.data:String).split(' ');
+        self.postMessage( parts.map( s -> '$s Haxe').join(' ') );
+        #else
+        (cast self.document.querySelectorAll('.output')[0]:InputElement).value = e.data;
         #end
     }
 
